@@ -1,0 +1,26 @@
+// a(coloana 1), b(coloana 2), c(coloana 3), d(coloana 4) = 1
+// A(coloana 1), B(coloana 2), C(coloana 3), D(coloana 4) = 2
+// x(coloana 1), y(coloana 2), z(coloana 3), t(coloana 4) = 3
+// X(coloana 1), Y(coloana 2), Z(coloana 3), T(coloana 4) = 4
+
+Cazuri:
+1:
+4 - inainte de toate
+1111
+2222
+3333
+
+2:
+4 - anulare
+3 - neaparat exista 4
+2 - exista 4 inainte de 3 sau doar 3 fara 4
+1 - exista 2 inainte de 1 fara 3 si 4 sau 3 inainte de 2 fara 4 sau 4 inainte de toate sau numai 1
+
+3:
+1 - trebuie sa existe 2 si 3 fara 4 sau 2 si 4 inainte de 3 sau 3 si 4 inainte de 2
+2 - trebuie sa existe 3 si 4, cu 4 inainte de 3
+3 - nu merge
+4 - nu merge
+
+4:
+NEAPARAT 1 2 3 4

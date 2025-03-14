@@ -1,0 +1,218 @@
+//LOAD AN EXAMPLE TO TRY
+//then load an input and click play
+
+//Syntax:
+
+//-------CONFIGURATION
+name: skyscrapers_lines
+init: start
+accept: Y
+
+// < = left
+// > = right
+// - = hold
+// use underscore for blank cells
+
+//States and symbols are case-sensitive
+
+//Load your code and click COMPILE.
+//or load an example (top-right).
+
+start,1
+start,1,>
+
+start,2
+start,2,>
+
+start,3
+start,3,>
+
+start,4
+start,4,>
+
+start,_
+start,_,>
+
+start,#
+start,#,>
+
+start,:
+verif1,:,>
+
+// Incepem verificarea pentru numarul 1
+
+verif1,1
+yes_1,1,>
+
+verif1,2
+verif1,2,>
+
+verif1,3
+verif1,3,>
+
+verif1,4
+verif1,4,>
+
+verif1,:
+n,:,-
+
+// Numarul 1 gasit
+
+yes_1,1
+n,1,-
+
+yes_1,2
+yes_1,2,>
+
+yes_1,3
+yes_1,3,>
+
+yes_1,4
+yes_1,4,>
+
+yes_1,:
+verif2,:,<
+
+// Incepere verificare pentru numarul 2
+
+verif2,1
+verif2,1,<
+
+verif2,2
+yes_2,2,<
+
+verif2,3
+verif2,3,<
+
+verif2,4
+verif2,4,<
+
+verif2,:
+n,:,-
+
+// Verificarea pt yes_2( gasit 2)
+
+yes_2,1
+yes_2,1,<
+
+yes_2,2
+n,2,-
+
+yes_2,3
+yes_2,3,<
+
+yes_2,4
+yes_2,4,<
+
+yes_2,:
+verif3,:,>
+
+// Incepem verificarea pt numarul 3
+
+verif3,1
+verif3,1,>
+
+verif3,2
+verif3,2,>
+
+verif3,3
+yes_3,3,>
+
+verif3,4
+verif3,4,>
+
+verif3,:
+n,:,-
+
+// Verificam yes_3(daca am gasit 3)
+
+yes_3,3
+n,3,-
+
+yes_3,1
+yes_3,1,>
+
+yes_3,2
+yes_3,2,>
+
+yes_3,4
+yes_3,4,>
+
+yes_3,:
+verif4,:,<
+
+// Verificam numarul 4 pe o linie
+
+verif4,1
+verif4,1,<
+
+verif4,2
+verif4,2,<
+
+verif4,3
+verif4,3,<
+
+verif4,4
+yes_4,4,<
+
+verif4,:
+n,:,-
+
+// Verificam pentru yes_4
+
+yes_4,1
+yes_4,1,<
+
+yes_4,2
+yes_4,2,<
+
+yes_4,3
+yes_4,3,<
+
+yes_4,4
+n,4,-
+
+yes_4,:
+ok,:,>
+
+// Pentru ok, am verificat pe prima linie
+ok,:
+ok_2,:,>
+
+ok,1
+ok,1,>
+
+ok,2
+ok,2,>
+
+ok,3
+ok,3,>
+
+ok,4
+ok,4,>
+
+ok,#
+ok,#,>
+
+// Pentru ok_2, dupa al doilea rand de :
+
+ok_2,:
+verif1,:,>
+
+ok_2,1
+ok_2,1,>
+
+ok_2,2
+ok_2,2,>
+
+ok_2,3
+ok_2,3,>
+
+ok_2,4
+ok_2,4,>
+
+ok_2,#
+ok_2,#,>
+
+ok_2,_
+Y,_,-
